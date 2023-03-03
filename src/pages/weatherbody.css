@@ -240,6 +240,7 @@ body {
     text-align: center;
     height: 3rem;
     font-size: 1.5rem;
+    background-color: white;
   }
   .searchfield:focus {
     /* border-radius:1rem 0rem 0rem 1rem; */
