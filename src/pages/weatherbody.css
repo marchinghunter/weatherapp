@@ -143,8 +143,7 @@ body {
   animation-timing-function: linear;
 }
 
-#z1_text {
-}
+
 
 #z2_text {
   animation-delay: 500ms;
@@ -176,10 +175,6 @@ body {
   }
 }
 @media (min-width: 320px) and (max-width: 600px) {
-  * {
-    /* overflow: hidden; */
-    /* border: 2px solid black; */
-  }
   html {
     height: max-content;
     overflow: hidden;
