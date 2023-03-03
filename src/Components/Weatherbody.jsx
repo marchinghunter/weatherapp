@@ -18,7 +18,7 @@ const Weatherbody = () => {
 
   const apiFetch = async () => {
     const pollutiondataapi = await axios.get(
-      `http://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=25d2c0b22be768d9096ba774b2e76ce3`
+      `https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=25d2c0b22be768d9096ba774b2e76ce3`
     );
     setPollutionData(await pollutiondataapi);
     const weatherdataapi = await axios.get(
@@ -29,7 +29,7 @@ const Weatherbody = () => {
   const fetchCity = async () => {
     try {
       const geoLocation = await axios.get(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=25d2c0b22be768d9096ba774b2e76ce3`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=25d2c0b22be768d9096ba774b2e76ce3`
       );
       setLatitude(await geoLocation.data[0].lat);
       setLongitude(await geoLocation.data[0].lon);
@@ -90,6 +90,7 @@ const Weatherbody = () => {
             type="text"
             className="searchfield"
             value={city}
+            placeholder="Search"
             onChange={(e) => {
               setCity(e.target.value);
             }}
