@@ -81,9 +81,9 @@ const Weatherbody = () => {
   return (
     <div className="container">
       <ToastContainer />
-      <div className="circle1"></div>
-      <div className="circle2"></div>
-      <div className="circle3"></div>
+      <div className="circle1 circle"></div>
+      <div className="circle2 circle"></div>
+      <div className="circle3 circle"></div>
       <div className="maincontent">
         <div className="searchContainer">
           <input
@@ -109,8 +109,8 @@ const Weatherbody = () => {
             Go
           </button>
         </div>
-        <h1>Current Weather</h1>
-        <h3>{dayjs().format("LLLL")}</h3>
+        <h1 className="title">Current Weather</h1>
+        <h3 className="time">{dayjs().format("LLLL")}</h3>
         <h1 className="city">
           {weatherdata.data.name},
           {weatherdata.data.sys.country}
