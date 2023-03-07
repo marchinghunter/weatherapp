@@ -18,18 +18,18 @@ const Weatherbody = () => {
 
   const apiFetch = async () => {
     const pollutiondataapi = await axios.get(
-      `https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=25d2c0b22be768d9096ba774b2e76ce3`
+      `https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=GET_YOUR_API_KEY_FROM_OPENWEATHER`
     );
     setPollutionData(await pollutiondataapi);
     const weatherdataapi = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=25d2c0b22be768d9096ba774b2e76ce3&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=GET_YOUR_API_KEY_FROM_OPENWEATHER&units=metric`
     );
     setWeatherdata(await weatherdataapi);
   };
   const fetchCity = async () => {
     try {
       const geoLocation = await axios.get(
-        `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=25d2c0b22be768d9096ba774b2e76ce3`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=GET_YOUR_API_KEY_FROM_OPENWEATHER`
       );
       setLatitude(await geoLocation.data[0].lat);
       setLongitude(await geoLocation.data[0].lon);
